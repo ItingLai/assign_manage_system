@@ -1,0 +1,1 @@
+import{_,a as s,c as t,e}from"./index-2d2b0b3d.js";const o={},c={class:"wrapper"},r=e("h1",null,"404",-1),n=e("p",null,"找不到你要的頁面",-1),a=e("a",{href:"/"},"回首頁",-1),d=[r,n,a];function l(i,p){return s(),t("div",c,d)}const u=_(o,[["render",l]]);export{u as default};

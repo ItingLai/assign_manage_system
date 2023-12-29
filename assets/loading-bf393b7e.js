@@ -1,0 +1,1 @@
+import{R as a}from"./index-2d2b0b3d.js";let o=0,n;const t=(i="資料載入中")=>{o===0&&(n=a.service({lock:!0,text:i,background:"rgba(0, 0, 0, 0.7)"}),o++)},c=()=>{o<=0||(o--,o===0&&n&&n.close())};export{c,t as o};

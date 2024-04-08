@@ -13,12 +13,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- 傾印 assign_manage_system 的資料庫結構
+-- 傾印 personal_manage_system 的資料庫結構
 CREATE DATABASE
-IF NOT EXISTS `assign_manage_system` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin */;
-USE `assign_manage_system`;
+IF NOT EXISTS `personal_manage_system` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin */;
+USE `personal_manage_system`;
 
--- 傾印  資料表 assign_manage_system.announcement 結構
+-- 傾印  資料表 personal_manage_system.announcement 結構
 CREATE TABLE
 IF NOT EXISTS `announcement`
 (
@@ -30,7 +30,7 @@ end` date NOT NULL
 
 -- 取消選取資料匯出。
 
--- 傾印  檢視 assign_manage_system.attend_data 結構
+-- 傾印  檢視 personal_manage_system.attend_data 結構
 -- 建立臨時表格，以解決檢視依存性錯誤
 CREATE TABLE `attend_data`
 (
@@ -44,7 +44,7 @@ CREATE TABLE `attend_data`
 (10) NOT NULL COLLATE 'utf8mb4_bin'
 ) ENGINE=MyISAM;
 
--- 傾印  資料表 assign_manage_system.calendar 結構
+-- 傾印  資料表 personal_manage_system.calendar 結構
 CREATE TABLE
 IF NOT EXISTS `calendar`
 (
@@ -59,7 +59,7 @@ IF NOT EXISTS `calendar`
 
 -- 取消選取資料匯出。
 
--- 傾印  資料表 assign_manage_system.user 結構
+-- 傾印  資料表 personal_manage_system.user 結構
 CREATE TABLE
 IF NOT EXISTS `user` (
   `id` int
@@ -88,7 +88,7 @@ INSERT INTO `user`
 VALUES
   ('boss', 'bossuser', '$2y$10$qNzWbzRLvli.4vpOr8Wh4OSWPOUF/yPXoI1uy2jOylTghWw2m9/6m', 'boss', '0900000000', 'address', 26400);
 
--- 傾印  資料表 assign_manage_system.copy_leave 結構
+-- 傾印  資料表 personal_manage_system.copy_leave 結構
 CREATE TABLE
 IF NOT EXISTS `copy_leave`
 (
@@ -124,7 +124,7 @@ DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- 取消選取資料匯出。
 
--- 傾印  資料表 assign_manage_system.leave 結構
+-- 傾印  資料表 personal_manage_system.leave 結構
 CREATE TABLE
 IF NOT EXISTS `leave`
 (
@@ -160,7 +160,7 @@ UPDATE CASCADE
 
 -- 取消選取資料匯出。
 
--- 傾印  資料表 assign_manage_system.salaryinfo 結構
+-- 傾印  資料表 personal_manage_system.salaryinfo 結構
 CREATE TABLE
 IF NOT EXISTS `salaryinfo`
 (
@@ -213,7 +213,7 @@ DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- 取消選取資料匯出。
 
--- 傾印  觸發器 assign_manage_system.leave_before_delete 結構
+-- 傾印  觸發器 personal_manage_system.leave_before_delete 結構
 SET @OLDTMP_SQL_MODE=@@SQL_MODE
 , SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
@@ -233,7 +233,7 @@ DELIMITER ;
 SET SQL_MODE
 =@OLDTMP_SQL_MODE;
 
--- 傾印  檢視 assign_manage_system.attend_data 結構
+-- 傾印  檢視 personal_manage_system.attend_data 結構
 -- 移除臨時表格，並建立最終檢視結構
 DROP TABLE IF EXISTS `attend_data`;
 CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `attend_data` AS

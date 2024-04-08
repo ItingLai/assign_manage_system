@@ -2,7 +2,7 @@
 $dbhost = 'localhost'; //一般是 localhost或127.0.0.1
 $dbuser = 'root'; //一般是 root
 $dbpasswd = '';
-$dbname = 'assign_manage_system';//資料庫名稱
+$dbname = 'personal_manage_system';//資料庫名稱
 $dbcharacter = 'utf8mb4'; //一般是 utf8
 
 if(!defined('Is_allow')){

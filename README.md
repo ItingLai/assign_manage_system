@@ -1,6 +1,6 @@
 # personal_manage_system 人事管理系統
 
-使用 [Vue](https://cn.vuejs.org/) +[ElementUI](https://element-plus.org/en-US/)結合完成的人事管理系統.
+使用 [Vue](https://cn.vuejs.org/) +[Element Plus](https://element-plus.org/en-US/)結合完成的人事管理系統.
 
 ## 客製化
 

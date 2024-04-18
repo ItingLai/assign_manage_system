@@ -15,6 +15,7 @@ if(!defined('Is_allow')){
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT); //讓資料庫不顯示錯誤原因
         return $pdo;
     } catch (PDOException $e) {
+        die("連線失敗：" .$e->getMessage());
         die("連線失敗：" . "請聯絡網站管理員");
     }
 }

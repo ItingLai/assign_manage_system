@@ -6,7 +6,7 @@
 
 - 可透過更改 Logo 或者名稱進行客製化
 - 自行下載並修改[FrontEnd](https://github.com/ItingLai/personal_manage_system_Frontend)
-- 修改資料庫設定檔，請視當前主機帳號密碼修改
+- 修改資料庫設定檔，請視當前主機帳號密碼修改，或使用docker-compose將會自動建置環境
   ![image](https://github.com/ItingLai/personal_manage_system/blob/main/docs/img/config_setting.png)
 
 ## 功能介紹

@@ -1,11 +1,21 @@
 version: '3.8'
 services:
-  phpapache:
-    build: ./
+  nginx:
+    image: nginx
     ports:
       - "80:80"
     volumes:
-      - .:/var/www/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./src:/usr/share/nginx/html
+    depends_on:
+      - backend
+      - db
+  backend:
+    image: iting945/php_apache_pdomysql
+    ports:
+      - "8080:80"
+    volumes:
+      - ./api:/var/www/html/api/
     depends_on:
       - db
   db:
@@ -16,13 +26,4 @@ services:
       MYSQL_ROOT_PASSWORD: admin 
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - "8080:80"
-    environment:
-      PMA_HOST: db
-      PMA_PORT: 3306
-    depends_on:
-      - db
   
